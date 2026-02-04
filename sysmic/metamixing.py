@@ -334,7 +334,7 @@ def validate_asymmetry_mesh(mesh: AsymmetryMesh,
 if __name__ == "__main__":
     print("="*80)
     print("  AAA - Aseptic Assignment Algorithm")
-    print("  Canonical Tool for SFA SuperCore")
+    print("  Canonical Tool for Sysmic SuperCore")
     print("="*80)
     
     # Example usage

@@ -1,5 +1,5 @@
 """
-Structured logging for SFA framework.
+Structured logging for Sysmic framework.
 """
 
 import logging
@@ -8,15 +8,15 @@ from pathlib import Path
 from datetime import datetime
 
 
-class SFALogger:
+class SysmicLogger:
     """
-    Structured logger for SFA operations.
+    Structured logger for Sysmic operations.
     Levels: DEBUG, INFO, WARNING, ERROR, CRITICAL
     """
     
     @staticmethod
     def setup(
-        name: str = "sfa",
+        name: str = "sysmic",
         level: int = logging.INFO,
         log_file: Path = None,
         console: bool = True
@@ -69,7 +69,16 @@ class SFALogger:
         
         if not logger.handlers:
             # Setup default if not configured
-            SFALogger.setup(name)
+        return logger
+    
+    @staticmethod
+    def get_logger(name: str = "sysmic") -> logging.Logger:
+        """Get existing or create default logger."""
+        logger = logging.getLogger(name)
+        
+        if not logger.handlers:
+            # Setup default if not configured
+            SysmicLogger.setup(name)
         
         return logger
 
@@ -77,13 +86,15 @@ class SFALogger:
 # Convenience functions
 def log_analysis_start(region: str, n_events: int, method: str = "GP"):
     """Log analysis initialization."""
-    logger = SFALogger.get_logger()
+    logger = SysmicLogger.get_logger()
     logger.info(f"Starting {method} analysis | Region: {region} | N={n_events}")
 
 
 def log_result(region: str, D2: float, SEM: float = None):
     """Log computed result."""
-    logger = SFALogger.get_logger()
+def log_result(region: str, D2: float, SEM: float = None):
+    """Log computed result."""
+    logger = SysmicLogger.get_logger()
     if SEM is not None:
         logger.info(f"Result | {region} | D₂={D2:.3f}±{SEM:.3f}")
     else:
@@ -92,13 +103,13 @@ def log_result(region: str, D2: float, SEM: float = None):
 
 def log_warning(message: str):
     """Log warning."""
-    logger = SFALogger.get_logger()
+    logger = SysmicLogger.get_logger()
     logger.warning(message)
 
 
 def log_error(message: str, exception: Exception = None):
     """Log error with optional exception."""
-    logger = SFALogger.get_logger()
+    logger = SysmicLogger.get_logger()
     if exception:
         logger.error(f"{message} | {type(exception).__name__}: {exception}")
     else:
@@ -107,5 +118,5 @@ def log_error(message: str, exception: Exception = None):
 
 def log_performance(operation: str, duration_ms: float):
     """Log performance metric."""
-    logger = SFALogger.get_logger()
+    logger = SysmicLogger.get_logger()
     logger.debug(f"Performance | {operation} | {duration_ms:.1f}ms")

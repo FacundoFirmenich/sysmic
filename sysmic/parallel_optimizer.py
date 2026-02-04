@@ -125,7 +125,7 @@ def optimize_d2_computation():
     Safe to call multiple times (idempotent).
     
     Example:
-        from sfa.parallel_optimizer import optimize_d2_computation
+        from sysmic.parallel_optimizer import optimize_d2_computation
         optimize_d2_computation()  # Now all D₂ calculations use parallel mode
     """
     try:
