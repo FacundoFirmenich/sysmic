@@ -18,6 +18,7 @@
   - $O(N \log N)$ dimension estimation via k-d trees.
   - Robust Theil-Sen scaling region detection.
   - Parallelized Bayesian sampling (emcee).
+- **Democratization Efficiency:** All analysis was designed and validated to run on standard consumer hardware (2016 mid-range laptop), removing barriers to high-impact science.
 
 ## Installation
 
