@@ -103,3 +103,4 @@ See [LICENSE](LICENSE) for details.
 **Data Sources:** 
 1. **United States Geological Survey (USGS)**
 2. **National Research Institute for Earth Science and Disaster Resilience (NIED)**, Japan (Hi-net/F-net High-Sensitivity Seismograph Network). Access provided under registered research protocols.
+3. **International Seismological Centre (ISC)**: ISC-GEM Global Instrumental Earthquake Catalogue (Ver. 11.0).
