@@ -77,8 +77,6 @@ class SysmicLogger:
             logger.addHandler(handler)
             logger.setLevel(logging.INFO)
         
-        return logger
-            SysmicLogger.setup(name)
         
         return logger
 

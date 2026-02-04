@@ -8,6 +8,7 @@ from scipy import spatial, stats
 from typing import Tuple, Dict, Optional, Union, Any
 import pandas as pd
 from . import accelerate  # CRITICAL: Accelerated Ripley corrections (relative import)
+from .utils import normalize_coordinates
 
 
 class GeodeticTransformer:
