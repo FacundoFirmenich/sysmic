@@ -101,6 +101,6 @@ Este proyecto está licenciado bajo la **GNU General Public License v3.0**.
 Vea [LICENSE](LICENSE) para más detalles.
 
 **Fuentes de Datos:**
-1. **United States Geological Survey (USGS)**
-2. **National Research Institute for Earth Science and Disaster Resilience (NIED)**, Japón (Hi-net/F-net High-Sensitivity Seismograph Network). Acceso proporcionado bajo protocolos de investigación registrados.
-3. **International Seismological Centre (ISC)**: ISC-GEM Global Instrumental Earthquake Catalogue (Ver. 11.0).
+1. **United States Geological Survey (USGS)** (Acceso Abierto)
+2. **International Seismological Centre (ISC)**: ISC-GEM Global Instrumental Earthquake Catalogue (Ver. 11.0). (Credenciales bajo demanda)
+3. **National Research Institute for Earth Science and Disaster Resilience (NIED)**, Japón (Hi-net/F-net). (Acceso restringido, sujeto a aprobación)

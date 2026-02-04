@@ -104,9 +104,7 @@ O Sysmic é de código aberto (GPLv3) e projetado para a era da Ciência Aberta.
 
 # Agradecimentos
 
-Esta pesquisa foi possível graças às políticas de dados abertos do **United States Geological Survey (USGS)**. Agradecemos explicitamente ao **National Research Institute for Earth Science and Disaster Resilience (NIED)**, Japão, por conceder acesso aos dados da rede de sismógrafos de alta sensibilidade (Hi-net/F-net) sob protocolos de usuário registrado. A precisão deste framework na resolução de estruturas profundas de subducção é diretamente atribuível à qualidade dos dados do NIED.
-
-Estendemos também nossa gratidão ao **International Seismological Centre (ISC)** pelo rápido fornecimento do **ISC-GEM Global Instrumental Earthquake Catalogue (Ver. 11.0)**, essencial para validar a calibração histórica de longo prazo e as leis de escala.
+Esta pesquisa baseia-se principalmente nas políticas de dados abertos do **United States Geological Survey (USGS)**, cujo acesso irrestrito forma a espinha dorsal de nossa análise. Estendemos também nossa gratidão ao **International Seismological Centre (ISC)** pelo rápido fornecimento do **ISC-GEM Global Instrumental Earthquake Catalogue (Ver. 11.0)**, disponível via credenciais sob demanda. Finalmente, agradecemos explicitamente ao **National Research Institute for Earth Science and Disaster Resilience (NIED)**, Japão, por conceder acesso aos dados da rede de sismógrafos de alta sensibilidade (Hi-net/F-net) após um rigoroso processo de aprovação para pesquisadores registrados; esses dados de acesso restrito foram cruciais para resolver estruturas profundas de subducção.
 
 # Declaração de Desenvolvimento Assistido por IA e Reflexão Crítica
 

@@ -103,9 +103,7 @@ Sysmic is open-source (GPLv3) and designed for the Open Science era. It includes
 
 # Acknowledgements
 
-This research was made possible by the open data policies of the **United States Geological Survey (USGS)**. We explicitly acknowledge and thank the **National Research Institute for Earth Science and Disaster Resilience (NIED)**, Japan, for granting access to the high-sensitivity seismograph network data (Hi-net/F-net) under registered user protocols. The precision of this framework in resolving deep slab structures is directly attributable to the quality of the NIED data.
-
-We also extend our gratitude to the **International Seismological Centre (ISC)** for the rapid provision of the **ISC-GEM Global Instrumental Earthquake Catalogue (Ver. 11.0)**, essential for validating long-term historical calibration and scaling laws.
+This research relies primarily on the open data policies of the **United States Geological Survey (USGS)**, whose unrestricted access forms the backbone of our analysis. We also extend our gratitude to the **International Seismological Centre (ISC)** for the rapid provision of the **ISC-GEM Global Instrumental Earthquake Catalogue (Ver. 11.0)**, available via on-demand credentials. Finally, we explicitly acknowledge and thank the **National Research Institute for Earth Science and Disaster Resilience (NIED)**, Japan, for granting access to the high-sensitivity seismograph network data (Hi-net/F-net) following a rigorous approval process for registered researchers; this restricted-access data was crucial for resolving deep slab structures.
 
 # Statement of AI-Assisted Development and Critical Reflection
 
