@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Firmenich"
+  given-names: "Facundo"
+  orcid: "https://orcid.org/0009-0002-6578-3811"
+- family-names: "Firmenich"
+  given-names: "Pau"
+- family-names: "Firmenich"
+  given-names: "León"
+title: "Seismic Fractal Analysis (SFA): A Python Framework for Precision-Calibrated Dimensional Inference"
+version: 1.0.0
+doi: 10.5281/zenodo.105281.178883
+date-released: 2026-02-03
+url: "https://github.com/FacundoFirmenich/SeismicFractalAnalysis"
+license: GPL-3.0
+keywords:
+  - seismology
+  - fractal-dimension
+  - bayesian-inference
+  - geophysics
+  - hi-net
+  - subduction-zones

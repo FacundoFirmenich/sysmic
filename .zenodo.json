@@ -1,0 +1,31 @@
+{
+    "title": "Seismic Fractal Analysis (SFA): Framework for Precision-Calibrated Dimensional Inference",
+    "upload_type": "software",
+    "description": "A comprehensive Python framework for performing precision-calibrated fractal dimension analysis of earthquake hypocenters. This software resolves the geometric projection and Bayesian saturation paradoxes in seismology through a Triple-Validation Framework (KL Divergence, Boundary Concentration, Scale Invariance). Includes modules for 3D correlation integral calculation, Bayesian D3 inference with suppression of saturation artifacts, and independent network quality calibration.",
+    "creators": [
+        {
+            "name": "Firmenich, Facundo",
+            "affiliation": "Centro de Estudios del Sur (CEDESUR)",
+            "orcid": "0009-0002-6578-3811"
+        },
+        {
+            "name": "Firmenich, Pau",
+            "affiliation": "Centro de Estudios del Sur (CEDESUR)"
+        },
+        {
+            "name": "Firmenich, León",
+            "affiliation": "Centro de Estudios del Sur (CEDESUR)"
+        }
+    ],
+    "access_right": "open",
+    "license": "GPL-3.0-or-later",
+    "keywords": [
+        "seismology",
+        "fractal dimension",
+        "Bayesian inference",
+        "Hi-Net",
+        "subduction zones",
+        "earthquake statistics"
+    ],
+    "version": "v1.0.0"
+}
