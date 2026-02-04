@@ -1,3 +1,4 @@
+import numpy as np
 from sysmic.core import FractalDimensionEstimator
 from sysmic.multifractal_analyzer import Multifractal3DAnalyzer as MultifractalAnalyzer
 

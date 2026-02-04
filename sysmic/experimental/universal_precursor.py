@@ -1,3 +1,6 @@
+import numpy as np
+from typing import Dict
+
 class UniversalPrecursorDetectionEngine:
     """
     Advanced detection system for universal precursor signatures

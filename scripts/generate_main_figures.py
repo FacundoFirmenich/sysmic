@@ -239,39 +239,6 @@ if __name__ == "__main__":
     generate_loglog_figure()
     generate_posterior_figure()
     generate_3d_maps()
- # Or just residuals in fit range? Usually interesting to see deviation.
-        # Let's show residuals relative to D=2.15 extrapolation
-        fit_full = 10**(intercept + slope * np.log10(r_vals))
-        residuals_noto = np.log10(C_vals) - np.log10(fit_full)
-    else:
-        # Fallback
-        r_vals = np.logspace(-1, 2, 50)
-        residuals_noto = np.zeros_like(r_vals)
-        ax2.text(0.5, 0.5, "Data Not Found", transform=ax2.transAxes)
-
-    ax2.set_xlabel('Distance r (km)', fontsize=11)
-    ax2.set_ylabel('C(r)', fontsize=11)
-    ax2.set_title(f'Hi-Net VRML: Real Data\nDefined D₂={D_val:.2f} (r < 3 km)', fontsize=12, fontweight='bold')
-    ax2.legend(loc='lower right')
-    ax2.grid(True, alpha=0.3, which='both')
-    
-    # Residuals B
-    ax2_res.semilogx(r_vals, residuals_noto, 'ko', markersize=3)
-    ax2_res.axhline(y=0, color='r', linestyle='--', alpha=0.5)
-    ax2_res.set_xlabel('Distance r (km)', fontsize=10)
-    ax2_res.set_ylabel('Log Residuals', fontsize=10)
-    ax2_res.set_title('Deviation from D=2.15', fontsize=9)
-    ax2_res.grid(True, alpha=0.3)
-    # Limit y-axis of residuals to see the flat part clearly
-    ax2_res.set_ylim(-1, 1)
-
-    plt.suptitle('Log-log Plots: Reference vs Real Hi-Net Data', 
-                 fontsize=14, fontweight='bold', y=0.95)
-    
-    plot_path = os.path.join('figures', 'figure6_loglog_scaling.pdf')
-    plt.savefig(plot_path, dpi=300, bbox_inches='tight')
-    plt.close()
-    print(f"Generated {plot_path}")
 
 def generate_posterior_figure():
     """Generate Figure 2: Posterior distributions using REAL result D ~ 2.15"""

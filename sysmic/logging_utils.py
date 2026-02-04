@@ -63,21 +63,21 @@ class SysmicLogger:
         return logger
     
     @staticmethod
-    def get_logger(name: str = "sfa") -> logging.Logger:
-        """Get existing or create default logger."""
-        logger = logging.getLogger(name)
-        
-        if not logger.handlers:
-            # Setup default if not configured
-        return logger
-    
-    @staticmethod
     def get_logger(name: str = "sysmic") -> logging.Logger:
         """Get existing or create default logger."""
         logger = logging.getLogger(name)
         
         if not logger.handlers:
             # Setup default if not configured
+            handler = logging.StreamHandler()
+            formatter = logging.Formatter(
+                '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+            )
+            handler.setFormatter(formatter)
+            logger.addHandler(handler)
+            logger.setLevel(logging.INFO)
+        
+        return logger
             SysmicLogger.setup(name)
         
         return logger

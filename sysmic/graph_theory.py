@@ -42,7 +42,7 @@ __all__ = [
     "compute_fault_network_centrality",
     "detect_graph_communities",
     "analyze_seismic_network_topology",
-    "ramanu jan_graph_properties",
+    "ramanujan_graph_properties",
 ]
 
 

@@ -1,3 +1,5 @@
+import numpy as np
+
 def demonstrate_advanced_quantum_system():
     """
     Demonstration of the advanced quantum seismic analysis system

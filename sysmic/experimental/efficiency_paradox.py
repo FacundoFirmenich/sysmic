@@ -1,3 +1,6 @@
+import numpy as np
+from typing import Dict, List
+
 class QuantumEfficiencyParadoxAnalyzer:
     """
     Analyzes the Quantum Efficiency Paradox in tectonic systems
