@@ -313,7 +313,7 @@ def benchmark_backend(n_points: int = 2000) -> dict:
 def print_performance_info():
     """Print performance backend information."""
     print("=" * 60)
-    print("SFA Performance Backend")
+    print("Sysmic Performance Backend")
     print("=" * 60)
     print(f"Active backend: {_BACKEND}")
     print(f"Cython available: {'✅ YES' if _HAS_CYTHON else '❌ NO'}")

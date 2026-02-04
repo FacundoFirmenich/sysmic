@@ -10,7 +10,7 @@ IMPROVEMENTS over fourier_metaanalysis.py:
 3. K-fold cross-validation support
 4. String feature encoding (window labels → vectors)
 
-Author: SFA Framework
+Author: Sysmic Framework
 Status: Core Component (Permanent) - OPTIMIZED VERSION
 ================================================================================
 """
@@ -401,7 +401,7 @@ def k_fold_validation(subsets: List[Dict],
 if __name__ == "__main__":
     print("="*80)
     print("  GRAPH FOURIER META-ANALYSIS - OPTIMIZED")
-    print("  Framework Hypersistémico 3A+\\CAHTPhase")
+    print("  Sysmic Framework")
     print("="*80)
     
     # Example with synthetic data

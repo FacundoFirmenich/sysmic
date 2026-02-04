@@ -12,7 +12,7 @@ Implements dual Fourier transform with logic/counter-logic segmentation:
 
 Generates volumetric multifractal unified hypersurface.
 
-Author: SFA Framework
+Author: Sysmic Framework
 Status: Core Component (Permanent)
 ================================================================================
 """
@@ -293,7 +293,7 @@ def volumetric_multifractal_synthesis(fourier_result: FourierDualResult,
 
 if __name__ == "__main__":
     print("="*80)
-    print("  FOURIER META-ANALYSIS - Framework Hypersistémico {3A+\\CAHTPhase}")
+    print("  FOURIER META-ANALYSIS - Sysmic Framework")
     print("  Dual Transform for Volumetric Multifractal Synthesis")
     print("="*80)
     

@@ -1,5 +1,5 @@
 """
-Computational optimization module for SFA.
+Computational optimization module for Sysmic.
 Implements sparse matrix methods and parallel processing for large-scale analysis.
 """
 

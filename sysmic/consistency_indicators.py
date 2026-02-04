@@ -17,7 +17,7 @@ INDICATORS:
 
 OUTPUT: Consistency score (0-1) + interpretation válida para cualquier N
 
-Author: SFA Framework
+Author: Sysmic Framework
 Status: Core Validation - N-Agnostic
 ================================================================================
 """

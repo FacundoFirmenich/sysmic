@@ -14,7 +14,7 @@ Process Flow:
 7. Primigenial Re-Entry (WITHOUT subprocess memory)
 8. NON-Segmentary Ensemble Auto-Comprehension
 
-Author: SFA Framework
+Author: Sysmic Framework
 Status: Core Framework (Permanent)
 ================================================================================
 """

@@ -2,7 +2,7 @@
 ================================================================================
 PREDECISIONAL SYSTEM - Supervised Algorithmic Validation
 ================================================================================
-Part of Framework Hypersistémico 3A+\CAHTPhase
+Part of Sysmic Framework
 
 Hierarchical predecisional system:
 - Algorithm generates PREDECISION ("voice without vote")
@@ -10,7 +10,7 @@ Hierarchical predecisional system:
 - Contextual logging of particular reasons
 - Hierarchy: @superroot > rua > ua
 
-Author: SFA Framework
+Author: Sysmic Framework
 Status: Core Component (Permanent)
 ================================================================================
 """
@@ -388,7 +388,7 @@ def request_validation(predecision: Predecision,
 
 if __name__ == "__main__":
     print("="*80)
-    print("  PREDECISIONAL SYSTEM - Framework Hypersistémico {3A+\\CAHTPhase}")
+    print("  PREDECISIONAL SYSTEM - Sysmic Framework")
     print("  Supervised Algorithmic Validation")
     print("="*80)
     

@@ -2,7 +2,7 @@
 ================================================================================
 METAMIXING MODULE (M2) - Aseptic Assignment Algorithm (3A)
 ================================================================================
-Canonical tool for SFA SuperCore.
+Canonical tool for Sysmic SuperCore.
 
 Generates pondered asymmetry mesh for non-egalitarian weight assignment
 based on intrinsic characteristics of strategic subsets.
@@ -10,7 +10,7 @@ based on intrinsic characteristics of strategic subsets.
 Foundation: Information-theoretic entropy maximization constrained by
 observed distributions.
 
-Author: SFA Framework
+Author: Sysmic Framework
 Status: Canonical Tool (Permanent)
 ================================================================================
 """

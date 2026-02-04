@@ -9,7 +9,7 @@ Implements emergent metrics that CANNOT be reduced to individual analyses:
 2. Multivariate anomalies (outlier detection in high-D space)
 3. Cross-event temporal patterns (evolution across events)
 
-Author: SFA Framework
+Author: Sysmic Framework
 Status: Validation & Analysis Module
 ================================================================================
 """
@@ -330,7 +330,7 @@ def compute_emergent_complexity(unified_data: np.ndarray,
 if __name__ == "__main__":
     print("="*80)
     print("  EMERGENT METRICS MODULE")
-    print("  Framework Hypersistémico 3A+\\CAHTPhase")
+    print("  Sysmic Framework")
     print("="*80)
     
     # Synthetic test

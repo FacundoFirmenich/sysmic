@@ -1,5 +1,5 @@
 """
-GRAPH + THEORY OF GRAPH SIGNALS (TGS) FOR SFA v2.5
+GRAPH + THEORY OF GRAPH SIGNALS (TGS) FOR SYSMIC v2.5
 ===================================================
 Based on resultsyfeedbacks.txt implementation proposal.
 

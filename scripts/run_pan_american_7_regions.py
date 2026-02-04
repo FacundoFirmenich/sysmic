@@ -1,7 +1,7 @@
 """
 Pan-American Transect Analysis - 7 Regions (CORE++ COMPLETE)
 ==============================================================
-Full integration of SFA Core++ capabilities:
+Full integration of Sysmic Core++ capabilities:
 - Pagination USGS (>20k events)
 - Ripley edge corrections (accelerated)
 - Parallel bootstrap optimization

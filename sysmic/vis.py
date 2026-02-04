@@ -1,5 +1,5 @@
 """
-Visualization module for Seismic Fractal Analysis.
+Visualization module for Sysmic Fractal Analysis.
 Implements publication-quality plotting with 'Premium Scientific' styling.
 """
 
@@ -83,7 +83,7 @@ class StyleManager:
 
 
 class FractalPlotter:
-    """Generates specific scientific plots for SFA."""
+    """Generates specific scientific plots for Sysmic."""
 
     @staticmethod
     def plot_spatial_distribution(

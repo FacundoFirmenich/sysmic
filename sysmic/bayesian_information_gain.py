@@ -22,7 +22,7 @@ Monte Carlo integration with:
 - Prior: Beta(α=7.5, β=2.5) analytical density
 - Samples: 10,000 for numerical stability
 
-Author: SFA Framework
+Author: Sysmic Framework
 Date: 2025-12-13
 """
 

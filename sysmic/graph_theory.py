@@ -11,7 +11,7 @@ Research Base:
 - Spectral graph theory for fault networks
 - Centrality measures for seismic hazard assessment
 
-Connection to SFA:
+Connection to Sysmic:
 - Nodes = Earthquake events or spatial cells
 - Edges = Proximity, temporal succession, or waveform similarity
 - Network metrics → Fault system complexity

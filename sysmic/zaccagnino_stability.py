@@ -20,7 +20,7 @@ Criterion:
     S > 0.95: Robust (Hi-Net benchmark: 0.966-0.995)
     S < 0.90: Suspect (Mmin-dependent artifact)
     
-Author: SFA Framework
+Author: Sysmic Framework
 Date: 2025-12-13
 """
 
@@ -29,7 +29,7 @@ import pandas as pd
 from pathlib import Path
 import sys
 
-# Add parent to path for SFA imports
+# Add parent to path for Sysmic imports
 sys.path.insert(0, str(Path(__file__).parent.parent))
 from sysmic.core import FractalDimensionEstimator
 

@@ -1,5 +1,5 @@
 """
-Waveform Analysis Module for SFA.
+Waveform Analysis Module for Sysmic.
 
 Implements advanced waveform processing and analysis for seismic fractal studies:
 - Q-factor (attenuation quality factor) estimation
@@ -14,7 +14,7 @@ Research Base:
 - Mayeda et al. (1992) - Coda Q estimation
 - Spectral analysis for fractal characterization
 
-Connection to SFA:
+Connection to Sysmic:
 - Waveform coda decay → Fractal scattering properties
 - Spectral slopes → Frequency-dependent fractal dimensions
 - Q-factor → Fault zone damage and fractal complexity
@@ -489,7 +489,7 @@ def analyze_coda_decay(
 
 if __name__ == "__main__":
     print("=" * 70)
-    print("  WAVEFORM ANALYSIS MODULE FOR SFA")
+    print("  WAVEFORM ANALYSIS MODULE FOR SYSMIC")
     print("=" * 70)
     
     # Example: Synthetic waveform

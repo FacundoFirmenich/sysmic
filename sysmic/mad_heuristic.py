@@ -23,7 +23,7 @@ Applications in Seismology:
 - Find spatial outliers (geographic clustering edges)
 - Discover extreme D2 values (fractal dimension anomalies)
 
-Author: SFA Framework v2.0
+Author: Sysmic Framework v2.0
 License: GPL-3.0
 """
 

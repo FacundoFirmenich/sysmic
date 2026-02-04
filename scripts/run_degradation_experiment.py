@@ -5,7 +5,7 @@ Synthetic Precision Degradation Experiment
 Quantifies the "Fisher Information Barrier" (sigma_c) where Bayesian inference 
 saturates to the prior mode (D=3.0) due to location uncertainty.
 
-Uses the `sfa` package for core calculations.
+Uses the `sysmic` package for core calculations.
 """
 
 import sys

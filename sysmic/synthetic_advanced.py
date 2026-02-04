@@ -1,5 +1,5 @@
 """
-Advanced synthetic validation geometries for SFA.
+Advanced synthetic validation geometries for Sysmic.
 Generates known fractal structures for algorithm validation.
 """
 

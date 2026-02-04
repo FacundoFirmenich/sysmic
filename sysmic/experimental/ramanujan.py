@@ -1,5 +1,5 @@
 """
-Ramanujan Nested Learning Module for SFA.
+Ramanujan Nested Learning Module for Sysmic.
 
 Implements Ramanujan-inspired nested partitions and continued fractions
 for hierarchical fractal analysis. This module bridges number theory with
@@ -13,7 +13,7 @@ Research Base:
 - Theta functions for partition theory
 - Compositional learning via nested optimization (Google, Q4 2025)
 
-Connection to SFA:
+Connection to Sysmic:
 - Nested radicals → Nested fractal dimensions
 - Partition functions → Event clustering hierarchies
 - Theta functions → Temporal modulation of spatial patterns
@@ -50,7 +50,7 @@ class RamanujanNestingEngine:
     --------------
     Ramanujan's nested radicals: sqrt(1 + 2*sqrt(1 + 3*sqrt(1 + 4*sqrt(...))))
     
-    SFA Application:
+    Sysmic Application:
     ---------------
     D_n = f(D_{n-1}, clustering_parameter_n)
     

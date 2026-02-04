@@ -1,5 +1,5 @@
 """
-SFA Bayesian Core - Dynesty Complementary Backend
+Sysmic Bayesian Core - Dynesty Complementary Backend
 ==================================================
 
 ADDS dynesty nested sampling as backend choice for D₂/D₃.

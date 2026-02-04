@@ -13,7 +13,7 @@ high-precision catalogs:
 Data Source: Japan Meteorological Agency (JMA) Unified Hypocenter Catalog
 Precision: Sub-meter location accuracy for Japanese events
 
-Author: SFA Framework
+Author: Sysmic Framework
 Date: 2025-12-11
 """
 
