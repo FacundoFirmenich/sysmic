@@ -102,6 +102,10 @@ Permite la reconciliación de la dimensionalidad geométrica y topológica.
 
 Sysmic es de código abierto (GPLv3) y está diseñado para la era de la Ciencia Abierta. Incluye pruebas unitarias exhaustivas, conjuntos de datos de validación sintética (ruido isotrópico vs. anisotrópico) y soporte Docker para entornos reproducibles. Este marco tiene como objetivo democratizar el acceso a herramientas de sismología estadística de alta gama, cerrando la brecha entre la complejidad teórica y la utilidad operativa.
 
+# Agradecimientos
+
+Esta investigación fue posible gracias a las políticas de datos abiertos del **United States Geological Survey (USGS)**. Agradecemos explícitamente al **National Research Institute for Earth Science and Disaster Resilience (NIED)**, Japón, por otorgar acceso a los datos de la red de sismógrafos de alta sensibilidad (Hi-net/F-net) bajo protocolos de usuario registrado. La precisión de este framework para resolver estructuras profundas de subducción es directamente atribuible a la calidad de los datos de NIED.
+
 # Declaración de Desarrollo Asistido por IA y Reflexión Crítica
 
 El desarrollo de este marco utilizó varios Grandes Modelos de Lenguaje (LLMs) para acelerar el prototipado y estructurar salidas intermedias. Los modelos utilizados, en orden descendente de intensidad y relevancia, fueron:

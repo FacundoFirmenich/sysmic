@@ -100,4 +100,6 @@ Congratulamo-nos com contribuições! Leia [CONTRIBUTING.md](CONTRIBUTING.md) pa
 Este projeto está licenciado sob a **GNU General Public License v3.0**.
 Veja [LICENSE](LICENSE) para detalhes.
 
-**Fonte de Dados:** United States Geological Survey (USGS)
+**Fontes de Dados:**
+1. **United States Geological Survey (USGS)**
+2. **National Research Institute for Earth Science and Disaster Resilience (NIED)**, Japão (Hi-net/F-net High-Sensitivity Seismograph Network). Acesso fornecido sob protocolos de pesquisa registrados.

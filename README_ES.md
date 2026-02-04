@@ -100,4 +100,6 @@ Sysmic se basa en tres pilares:
 Este proyecto está licenciado bajo la **GNU General Public License v3.0**.
 Vea [LICENSE](LICENSE) para más detalles.
 
-**Fuente de Datos:** United States Geological Survey (USGS)
+**Fuentes de Datos:**
+1. **United States Geological Survey (USGS)**
+2. **National Research Institute for Earth Science and Disaster Resilience (NIED)**, Japón (Hi-net/F-net High-Sensitivity Seismograph Network). Acceso proporcionado bajo protocolos de investigación registrados.

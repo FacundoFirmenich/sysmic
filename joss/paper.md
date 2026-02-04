@@ -101,6 +101,10 @@ Enables the reconciliation of geometric and topological dimensionality.
 
 Sysmic is open-source (GPLv3) and designed for the Open Science era. It includes comprehensive unit tests, synthetic validation datasets (isotropic vs. anisotropic noise), and Docker support for reproducible environments. This framework aims to democratize access to high-end statistical seismology tools, bridging the gap between theoretical complexity and operational utility.
 
+# Acknowledgements
+
+This research was made possible by the open data policies of the **United States Geological Survey (USGS)**. We explicitly acknowledge and thank the **National Research Institute for Earth Science and Disaster Resilience (NIED)**, Japan, for granting access to the high-sensitivity seismograph network data (Hi-net/F-net) under registered user protocols. The precision of this framework in resolving deep slab structures is directly attributable to the quality of the NIED data.
+
 # Statement of AI-Assisted Development and Critical Reflection
 
 The development of this framework utilized several Large Language Models (LLMs) to accelerate prototyping and structure intermediate outputs. The models used, in descending order of intensity and relevance, were:
