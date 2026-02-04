@@ -52,6 +52,18 @@ print(f"Saturation Probability: {bayes_res.p_bound:.4f}")
 
 Full documentation is available in the `docs/` directory and in the accompanying paper.
 
+## Evolution from Predecessor
+
+This repository represents a complete architectural overhaul of the initial research found at [fractal_analysis_of_seismics](https://github.com/FacundoFirmenich/fractal_analysis_of_seismics). 
+
+**Why a new repository?**
+While the previous repository served as a focused codebase for specific manuscript results, **SFA** is a generalized, modular framework ("Superset") designed for broad applicability. It introduces:
+- **Real-Time Monitoring:** via the **Gravitas** engine.
+- **Automated Intelligence:** via the **Nexus** module.
+- **Global Interoperability:** via **WSG** connectors.
+
+SFA transitions the project from a single-purpose script collection to a scalable, open-source scientific platform capable of supporting future planetary and real-time seismology missions.
+
 ## Citation
 
 If you use SFA in your research, please cite:
