@@ -1,23 +1,21 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 authors:
-- family-names: "Firmenich"
-  given-names: "Facundo"
-  orcid: "https://orcid.org/0009-0002-6578-3811"
-- family-names: "Firmenich"
-  given-names: "Pau"
-- family-names: "Firmenich"
-  given-names: "León"
-title: "Seismic Fractal Analysis (SFA): A Python Framework for Precision-Calibrated Dimensional Inference"
-version: 1.0.0
-doi: 10.5281/zenodo.105281.178883
-date-released: 2026-02-03
-url: "https://github.com/FacundoFirmenich/SeismicFractalAnalysis"
-license: GPL-3.0
-keywords:
-  - seismology
-  - fractal-dimension
-  - bayesian-inference
-  - geophysics
-  - hi-net
-  - subduction-zones
+  - family-names: "Pan-American Research Team"
+    given-names: "Sysmic"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+title: "Sysmic: An Advanced Computational Framework for Pan-American Seismic Fractal Analysis"
+version: 6.0.0
+date-released: 2026-02-04
+url: "https://github.com/YourUsername/Sysmic"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Pan-American Research Team"
+      given-names: "Sysmic"
+  doi: "10.5281/zenodo.XXXXXX"
+  journal: "Journal of Open Source Software"
+  month: 2
+  start: 1
+  title: "Multi-Planar Hierarchical Organization of Seismicity Across the Pan-American Margin: A Bayesian Fractal Framework"
+  year: 2026

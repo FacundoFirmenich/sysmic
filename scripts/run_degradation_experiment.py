@@ -20,9 +20,9 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.dirname(SCRIPT_DIR)
 sys.path.append(PROJECT_ROOT)
 
-from sfa.core import FractalDimensionEstimator
-from sfa.bayesian_core import bayesian_d3_inference
-from sfa.bayesian_d3 import compute_kl_divergence_d3
+from sysmic.core import FractalDimensionEstimator
+from sysmic.bayesian_core import bayesian_d3_inference
+from sysmic.bayesian_d3 import compute_kl_divergence_d3
 
 # Configuration
 DATA_DIR = Path(PROJECT_ROOT) / 'data' / 'processed'

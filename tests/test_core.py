@@ -6,8 +6,8 @@ import os
 # Add package to path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from sfa.core import FractalDimensionEstimator
-from sfa.bayesian_d3 import bayesian_d3_inference
+from sysmic.core import FractalDimensionEstimator
+from sysmic.bayesian_d3 import bayesian_d3_inference
 
 class TestSFA(unittest.TestCase):
     

@@ -14,8 +14,8 @@ from datetime import datetime, timedelta
 import requests
 import io
 
-from sfa.core import FractalDimensionEstimator
-from sfa.stats import SeismicityAnalysis
+from sysmic.core import FractalDimensionEstimator
+from sysmic.stats import SeismicityAnalysis
 
 END_DATE = datetime(2025, 12, 12)
 

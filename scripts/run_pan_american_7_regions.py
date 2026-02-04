@@ -29,14 +29,14 @@ from datetime import datetime
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
-from sfa.data import SeismicDataAcquisition, PanAmericanPresets
-from sfa.core import FractalDimensionEstimator, SyntheticValidator
-from sfa.vis import FractalPlotter
-from sfa.multifractal import MultifractalAnalyzer
-from sfa.stats import BayesianRobustness, SeismicityAnalysis, SpatialStatisticalAnalysis
-from sfa import accelerate
-from sfa.graph_tgs import compute_seismic_graph_stats
-from sfa.analogies import scale_transformation_operator
+from sysmic.data import SeismicDataAcquisition, PanAmericanPresets
+from sysmic.core import FractalDimensionEstimator, SyntheticValidator
+from sysmic.vis import FractalPlotter
+from sysmic.multifractal_analyzer import Multifractal3DAnalyzer as MultifractalAnalyzer
+from sysmic.stats import BayesianRobustness, SeismicityAnalysis, SpatialStatisticalAnalysis
+from sysmic import accelerate
+from sysmic.graph_tgs import compute_seismic_graph_stats
+from sysmic.analogies import scale_transformation_operator
 
 
 def run_synthetic_validation():

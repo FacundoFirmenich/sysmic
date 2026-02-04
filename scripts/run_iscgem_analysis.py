@@ -13,8 +13,10 @@ import pandas as pd
 import numpy as np
 from datetime import datetime, timedelta
 
-from sfa.core import FractalDimensionEstimator
-from sfa.stats import SeismicityAnalysis
+from sysmic.core import FractalDimensionEstimator
+from sysmic.stats import SeismicityAnalysis
+from sysmic.system import Sysmic
+from sysmic.infrastructure import SystemConfiguration, CertificationLevel
 
 # Configuration
 ISCGEM_CATALOG = Path(__file__).parent / "isc-gem-cat.csv"
