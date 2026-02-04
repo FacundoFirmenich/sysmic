@@ -9,7 +9,6 @@ from typing import Tuple, Dict
 
 __all__ = [
     "MultifractalAnalyzer",
-    "compute_renyi_spectrum",
     "compute_generalized_dimensions",
 ]
 
