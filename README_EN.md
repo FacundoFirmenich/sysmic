@@ -34,7 +34,7 @@
 ### 1. Installation
 
 ```bash
-git clone https://github.com/YourUsername/Sysmic.git
+git clone https://github.com/facundofirmenich/sysmic.git
 cd Sysmic
 pip install -r requirements.txt
 ```

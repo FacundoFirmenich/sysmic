@@ -1,21 +1,29 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 authors:
-  - family-names: "Pan-American Research Team"
-    given-names: "Sysmic"
-    orcid: "https://orcid.org/0000-0000-0000-0000"
-title: "Sysmic: An Advanced Computational Framework for Pan-American Seismic Fractal Analysis"
+  - family-names: "Firmenich"
+    given-names: "Facundo"
+    orcid: "https://orcid.org/0009-0002-6578-3811"
+  - family-names: "Firmenich"
+    given-names: "Pau"
+  - family-names: "Firmenich"
+    given-names: "León"
+title: "Sysmic: An Open-Source Intelligence Framework for High-Precision Fractal Tomography and Real-Time Monitoring"
 version: 6.0.0
 date-released: 2026-02-04
-url: "https://github.com/YourUsername/Sysmic"
+url: "https://github.com/facundofirmenich/sysmic"
 preferred-citation:
   type: article
   authors:
-    - family-names: "Pan-American Research Team"
-      given-names: "Sysmic"
+    - family-names: "Firmenich"
+      given-names: "Facundo"
+      orcid: "https://orcid.org/0009-0002-6578-3811"
+    - family-names: "Firmenich"
+      given-names: "Pau"
+    - family-names: "Firmenich"
+      given-names: "León"
   doi: "10.5281/zenodo.XXXXXX"
   journal: "Journal of Open Source Software"
   month: 2
-  start: 1
-  title: "Multi-Planar Hierarchical Organization of Seismicity Across the Pan-American Margin: A Bayesian Fractal Framework"
+  title: "Sysmic: An Open-Source Intelligence Framework for High-Precision Fractal Tomography and Real-Time Monitoring"
   year: 2026

@@ -37,7 +37,7 @@ streamlit>=1.28.0
 3. **Deploy on Streamlit Cloud**:
    - Go to https://share.streamlit.io
    - Click "New app"
-   - Repository: `[YOUR_USERNAME]/PanAmericanPaper`
+   - Repository: `facundofirmenich/sysmic`
    - Branch: `main`
    - Main file path: `streamlit_app.py`
    - Click "Deploy"
@@ -86,7 +86,7 @@ streamlit run streamlit_app.py
 
 - [x] `streamlit_app.py` complete and tested
 - [x] `requirements.txt` includes all dependencies
-- [x] `sfa/` package importable
+- [x] `sysmic/` package importable
 - [x] Default bootstrap=200 for publication quality
 - [x] Error handling for USGS API failures
 - [x] Progress indicators for long computations
@@ -99,8 +99,8 @@ streamlit run streamlit_app.py
 
 ## 🔧 TROUBLESHOOTING
 
-### Issue: "ModuleNotFoundError: No module named 'sfa'"
-**Solution**: Ensure `sfa/` directory is in repository root and contains `__init__.py`
+### Issue: "ModuleNotFoundError: No module named 'sysmic'"
+**Solution**: Ensure `sysmic/` directory is in repository root and contains `__init__.py`
 
 ### Issue: "USGS API timeout"
 **Solution**: App includes retry logic. User can adjust date range to reduce event count.

@@ -1,72 +1,103 @@
-# Seismic Fractal Analysis (SFA)
+# 🌋 SYSMIC: Geophysical Analysis Framework
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.105281.178883.svg)](https://doi.org/10.5281/zenodo.105281.178883)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
+[![Docker](https://img.shields.io/badge/docker-ready-green.svg)](https://hub.docker.com/)
+[![Open Science](https://badges.frapsoft.com/os/v1/open-science.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXX)
 
-**SFA** is a Python framework designed to resolve minimal fractal dimension estimates from noisy earthquake catalogs. It implements a **Triple-Validation Framework** to distinguish genuine volumetric seismicity from Bayesian saturation artifacts caused by location uncertainty.
+> **"Unveiling the hidden architecture of tectonic systems."**
 
-## Key Features
+**Sysmic** (formerly FractalSystemPro) is a state-of-the-art computational framework for advanced seismic analysis. It integrates fractal geometry, multifractal spectra, temporal dynamics, and Bayesian inference to provide a holistic understanding of earthquake physics.
 
-- **Precision-Calibrated Inference:** Detects the "Fisher Information Barrier" ($\sigma_c$) where Bayesian inference saturates.
-- **Triple-Validation:**
-  1.  **KL Divergence:** Screening for prior dominance.
-  2.  **Boundary Concentration:** Detecting artificial saturation at $D=3$.
-  3.  **Scale Invariance:** Zaccagnino stability test.
-- **Independent Network Quality:** Calibrates an effective quality metric ($Q_{eff}$) without circular reliance on fractal results.
-- **Optimized Algorithms:**
-  - $O(N \log N)$ dimension estimation via k-d trees.
-  - Robust Theil-Sen scaling region detection.
-  - Parallelized Bayesian sampling (emcee).
-- **Democratization Efficiency:** All analysis was designed and validated to run on standard consumer hardware (2016 mid-range laptop), removing barriers to high-impact science.
+---
 
-## Installation
+## 🌟 Key Features
+
+### 🔬 Scientific Core
+- **Fractal Dimension (D₂)**: Robust Grassberger-Procaccia estimation with bootstrap uncertainty.
+- **Multifractal Spectrum (Dq)**: Full $f(\alpha)$ singularity spectrum analysis.
+- **Temporal Dynamics**: $D(t)$ evolution and critical slowing down detection.
+- **Bayesian Validation**: Probabilistic assessment of dimensional estimates.
+- **Topological Analysis**: Graph-based community detection in seismic networks.
+
+### 💻 Modern Interfaces
+- **Interactive CLI**: Professional terminal interface with ASCII art visualization.
+- **Web Dashboard**: Streamlit-powered GUI for easy data exploration.
+- **Cloud Studio**: Unified Google Colab notebook for instant execution.
+- **Containerized**: Full Docker support for reproducible deployment.
+
+---
+
+## 🚀 Quick Start
+
+### 1. Installation
 
 ```bash
-git clone https://github.com/FacundoFirmenich/SeismicFractalAnalysis.git
-cd SeismicFractalAnalysis
-pip install .
+git clone https://github.com/facundofirmenich/sysmic.git
+cd sysmic
+pip install -r requirements.txt
 ```
 
-## Quick Start
+### 2. Interactive Mode (CLI)
 
-```python
-from sfa import FractalAnalyzer
+Access the professional command-line interface:
 
-# Load data (x, y, z in km)
-data = load_my_catalog("events.csv")
-
-# Initialize analyzer
-analyzer = FractalAnalyzer(data)
-
-# Compute Correlation Dimension D2
-results = analyzer.compute_d2(r_min=2.0, r_max=500.0)
-print(f"D2: {results.d2:.3f}")
-
-# Infer Latent D3 (Bayesian)
-bayes_res = analyzer.infer_d3_bayesian(results.d2, sigma_obs=0.2)
-print(f"D3 Posterior Mode: {bayes_res.d3_mode:.3f}")
-print(f"Saturation Probability: {bayes_res.p_bound:.4f}")
+```bash
+python -m sysmic.interactive
 ```
 
-## Documentation
+### 3. Web Dashboard (Streamlit)
 
-Full documentation is available in the `docs/` directory and in the accompanying paper.
+Launch the local web server:
 
-## Evolution from Predecessor
+```bash
+streamlit run streamlit_app.py
+```
 
-This repository represents a complete architectural overhaul of the initial research found at [fractal_analysis_of_seismics](https://github.com/FacundoFirmenich/fractal_analysis_of_seismics). 
+### 4. Docker Deployment
 
-**Why a new repository?**
-While the previous repository served as a focused codebase for specific manuscript results, **SFA** is a generalized, modular framework ("Superset") designed for broad applicability. It introduces:
-- **Real-Time Monitoring:** via the **Gravitas** engine.
-- **Automated Intelligence:** via the **Nexus** module.
-- **Global Interoperability:** via **WSG** connectors.
+Run the containerized environment:
 
-SFA transitions the project from a single-purpose script collection to a scalable, open-source scientific platform capable of supporting future planetary and real-time seismology missions.
+```bash
+docker build -t sysmic .
+docker run -it sysmic
+```
 
-## Citation
+---
 
-If you use SFA in your research, please cite:
+## 📊 Scientific Methodology
 
-> Firmenich, F., et al. (2026). "Fractal Tomography and the Depth-Dependent Planarization of Seismicity". *Journal of Geophysical Research: Solid Earth*.
+Sysmic implements a rigorous **Triple Validation Protocol**:
+
+1.  **Geometric Consistency**: $D_q$ spectrum width ($\Delta\alpha$) must exceed noise floor.
+2.  **Temporal Stability**: $\Delta D_2 / \Delta t$ must remain bounded during quiescence.
+3.  **Statistical Significance**: Surrogate data testing (random shuffling) with $p < 0.05$.
+
+For detailed formulations, see [MATHEMATICAL_APPENDIX.md](MATHEMATICAL_APPENDIX.md).
+
+---
+
+## 🌍 Open Science Manifesto
+
+We believe that knowledge locked away is not knowledge—it is a secret. 
+Sysmic is built on three pillars:
+
+1.  **Transparency**: Every algorithm is open for inspection.
+2.  **Reproducibility**: Containerized environments ensure consistent results.
+3.  **Accessibility**: Tools designed for everyone, from students to top-tier researchers.
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and submission process.
+
+---
+
+## 📜 License
+
+This project is licensed under the **GNU General Public License v3.0**. 
+See [LICENSE](LICENSE) for details.
+
+**Data Source:** United States Geological Survey (USGS)
