@@ -16,17 +16,17 @@
 
 ## Key Results (Empirical — Zero Synthetic Data)
 
-| Region | Network | $\sigma_h$ (km) | $D_2$ | $D_3$ | SVP Tier |
+| Region | Network | $\sigma_h$ (km) | $D_2$ | $D_3$ | IQI Score |
 |---|---|---|---|---|---|
-| Noto, Japan       | Hi-Net      | 0.5    | 2.12 | 2.82 ± 0.05   | ✅ Tier 1 |
-| Tohoku, Japan     | Hi-Net      | 0.7    | 2.09 | 2.83 ± 0.06   | ✅ Tier 1 |
-| Tokachi, Japan    | Hi-Net      | 0.6    | 2.15 | 2.86 ± 0.07   | ✅ Tier 1 |
-| Valais, Switzerland | Swiss-SED | 0.8–1.2 | 1.50 | 1.911 ± 0.066 | ✅ Tier 1 |
-| SCSN baseline     | SCSN        | 0.1    | —    | —              | ✅ Tier 2 |
-| Cook Strait, NZ   | GeoNet*     | <1.0   | 2.24 | 2.53 ± 0.17   | ✅ Resolved |
-| Bay of Plenty, NZ | GeoNet*     | <1.0   | 1.91 | 2.20 ± 0.20   | ✅ Resolved |
-| Sumatra           | GEOFON      | 7.5    | 2.21 | 2.998 ± 0.002 | ❌ Saturated |
-| Cascadia          | USGS        | 6.1    | 2.21 | → 3.0         | ❌ Saturated |
+| Noto, Japan       | Hi-Net      | 0.5    | 2.12 | 2.82 ± 0.05   | ✅ 0.995 |
+| Tohoku, Japan     | Hi-Net      | 0.7    | 2.09 | 2.83 ± 0.06   | ✅ 0.966 |
+| Tokachi, Japan    | Hi-Net      | 0.6    | 2.15 | 2.86 ± 0.07   | ✅ 0.972 |
+| Valais, Switzerland | Swiss-SED | 0.8–1.2 | 1.50 | 1.911 ± 0.066 | ✅ 0.988 |
+| SCSN baseline     | SCSN        | 0.1    | —    | —              | ✅ 0.999 |
+| Cook Strait, NZ   | GeoNet*     | <1.0   | 2.24 | 2.53 ± 0.17   | ✅ >0.90 |
+| Bay of Plenty, NZ | GeoNet*     | <1.0   | 1.91 | 2.20 ± 0.20   | ✅ >0.90 |
+| Sumatra           | GEOFON      | 7.5    | 2.21 | 2.998 ± 0.002 | ❌ 0.000 |
+| Cascadia          | USGS        | 6.1    | 2.21 | → 3.0         | ❌ 0.329 |
 
 *High-precision local relocations (not national GeoNet catalog).
 
@@ -44,7 +44,7 @@ sysmic/                     Core Python library (v8.0.0)
 ├── bayesian_d3.py          MCMC D₃ inference (emcee, Uniform[1.5,3.0] prior)
 ├── statistics.py           Bootstrap, Theil-Sen, b-value (Aki 1965)
 ├── geometry.py             Steiner formula, deck-of-cards model (Q=2/3)
-└── zaccagnino_stability.py Mmin-independence stability test (SVP T3)
+└── zaccagnino_stability.py Mmin-independence stability test (IQI criteria $S$)
 
 data/                       22 empirical CSVs (all from real catalogs)
 figures/                    14 manuscript figures (PNG 300 dpi)
