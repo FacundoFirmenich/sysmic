@@ -1,0 +1,53 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "Sysmic: Fractal Tomography of Seismicity"
+version: "8.0.0"
+date-released: "2026-04-08"
+license: GPL-3.0
+repository-code: "https://github.com/cedesur/sysmic"
+doi: "10.5281/zenodo.18480821"
+authors:
+  - family-names: Firmenich
+    given-names: Facundo
+    orcid: "https://orcid.org/0009-0002-6578-3811"
+    affiliation: "Centro de Estudios del Sur (CEDESUR)"
+  - family-names: Firmenich
+    given-names: Pau
+    affiliation: "Centro de Estudios del Sur (CEDESUR)"
+  - family-names: Firmenich
+    given-names: León
+    affiliation: "Centro de Estudios del Sur (CEDESUR)"
+abstract: >
+  Sysmic is a Python framework for precision-calibrated Bayesian fractal
+  tomography of seismic catalogs. It implements the Grassberger-Procaccia
+  algorithm with MCMC inference of latent dimensionality D3 (emcee, 32
+  walkers, 10 000 steps, Uniform[1.5, 3.0] prior), identifying the Fisher
+  Information Barrier — the critical precision threshold (σ_c = 2.3 ± 0.4 km)
+  beyond which Bayesian inference collapses to the prior. Companion software
+  to Firmenich et al. (2026), JGR Solid Earth.
+keywords:
+  - seismology
+  - fractal dimension
+  - bayesian inference
+  - fisher information
+  - grassberger-procaccia
+  - hi-net
+  - tectonic hierarchy
+  - open science
+  - emcee
+  - MCMC
+references:
+  - type: article
+    authors:
+      - family-names: Firmenich
+        given-names: Facundo
+      - family-names: Firmenich
+        given-names: Pau
+      - family-names: Firmenich
+        given-names: León
+    title: "Fractal Tomography and the Fisher Information Barrier of Seismicity"
+    journal: "Journal of Geophysical Research: Solid Earth"
+    year: 2026
+    notes: "Under review"
+    url: "https://doi.org/10.31223/x5rf3v"

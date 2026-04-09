@@ -1,0 +1,65 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sysmic"
+version = "8.0.0"
+description = "Precision-calibrated Bayesian fractal tomography of seismic catalogs"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "GPL-3.0-only" }
+authors = [
+    { name = "Facundo Firmenich", email = "f.firmenich@cedesur.org" },
+    { name = "Pau Firmenich" },
+    { name = "León Firmenich" }
+]
+keywords = [
+    "seismology", "fractal dimension", "Bayesian inference",
+    "Fisher information", "Hi-Net", "tectonic hierarchy",
+    "Grassberger-Procaccia", "MCMC", "emcee"
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Physics",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "numpy>=1.24.0",
+    "scipy>=1.10.0",
+    "pandas>=2.0.0",
+    "matplotlib>=3.7.0",
+    "emcee>=3.1.0",
+    "joblib>=1.2.0",
+    "requests>=2.28.0",
+]
+
+[project.optional-dependencies]
+app = ["streamlit>=1.28.0"]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+]
+
+[project.urls]
+"Homepage"      = "https://github.com/FacundoFirmenich/sysmic"
+"Bug Tracker"   = "https://github.com/FacundoFirmenich/sysmic/issues"
+"JOSS Paper"    = "https://joss.theoj.org/papers/placeholder"
+"Zenodo"        = "https://doi.org/10.5281/zenodo.18480821"
+
+[project.scripts]
+sysmic-analyze = "sysmic.core:main"
+
+[tool.setuptools]
+packages = ["sysmic"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"

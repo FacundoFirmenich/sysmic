@@ -1,0 +1,8 @@
+region,stability,d2_range,robust
+San Andreas,0.973,2.072-2.076,True
+Cascadia,0.921,1.798-1.812,False
+Cocos,0.967,2.079-2.087,True
+Caribbean,0.954,2.455-2.467,True
+Andes Central,0.963,2.234-2.244,True
+Andes Sur,0.946,2.001-2.015,False
+Andes Norte,0.889,1.312-1.408,False

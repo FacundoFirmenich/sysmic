@@ -1,0 +1,43 @@
+{
+    "title": "Sysmic v8.0.0: Fractal Tomography and the Fisher Information Barrier of Seismicity",
+    "upload_type": "software",
+    "description": "Companion software to Firmenich et al. (2026), JGR Solid Earth. Sysmic implements precision-calibrated Bayesian fractal tomography of seismic catalogs via the Grassberger-Procaccia correlation integral and MCMC inference of latent dimensionality D3 (emcee, 32 walkers, Uniform[1.5, 3.0] prior). Identifies the Fisher Information Barrier (sigma_c = 2.3 +/- 0.4 km) — the precision threshold beyond which Bayesian D3 inference collapses to the boundary prior. Validated on seven seismic networks across five tectonic regimes.",
+    "creators": [
+        {
+            "name": "Firmenich, Facundo",
+            "affiliation": "Centro de Estudios del Sur (CEDESUR) / Universitat de Barcelona",
+            "orcid": "0009-0002-6578-3811"
+        },
+        {
+            "name": "Firmenich, Pau",
+            "affiliation": "Centro de Estudios del Sur (CEDESUR)"
+        },
+        {
+            "name": "Firmenich, León",
+            "affiliation": "Centro de Estudios del Sur (CEDESUR)"
+        }
+    ],
+    "access_right": "open",
+    "license": "GPL-3.0-or-later",
+    "keywords": [
+        "seismology",
+        "fractal dimension",
+        "bayesian inference",
+        "Fisher information",
+        "Grassberger-Procaccia",
+        "Hi-Net",
+        "tectonic hierarchy",
+        "MCMC",
+        "emcee",
+        "open science"
+    ],
+    "version": "v8.0.0",
+    "publication_date": "2026-04-08",
+    "related_identifiers": [
+        {
+            "identifier": "10.31223/x5rf3v",
+            "relation": "isSupplementTo",
+            "resource_type": "publication-preprint"
+        }
+    ]
+}

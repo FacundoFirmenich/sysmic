@@ -1,0 +1,5 @@
+regime,D2_mean,D2_std,n_regions,oos_D2,oos_std
+Rifting,1.26,0.05,1,,
+Transform,1.81,0.12,2,,
+Subduction,2.12,0.08,5,2.12,0.08
+Collision,2.24,0.05,1,,

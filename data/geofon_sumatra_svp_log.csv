@@ -1,0 +1,28 @@
+# Sysmic v8.0.0 — SVP Analysis Log: GEOFON Sumatra
+# Generated: 2026-04-08
+# Network: GEOFON, Region: Sumatra subduction zone
+# Data source: geofon.gfz-potsdam.de
+# DOI: 10.5281/zenodo.18480821
+#
+# SVP Classification: REJECT (Tier 3)
+# Reason: sigma_h >> sigma_c (7.5 >> 2.3 km)
+#
+# Column definitions:
+#   sigma_h_km : horizontal location uncertainty (km)
+#   D2_obs     : observed Grassberger-Procaccia dimension
+#   D3_mcmc    : MCMC posterior mean (emcee, 32 walkers, 10000 steps, 2000 burnin)
+#   D3_std     : MCMC posterior std
+#   D3_ci_lo   : 2.5th percentile of posterior
+#   D3_ci_hi   : 97.5th percentile of posterior
+#   Pbnd_pct   : posterior mass at D3 in [2.95, 3.00] (%)
+#   KL_nats    : KL divergence from prior (nats)
+#   eta        : fidelity function eta = I_lik / I_lik(sigma=0)
+#   SVP_T1     : T1 check (sigma_h < sigma_c)
+#   SVP_T2     : T2 check (Pbnd < 5%)
+#   SVP_T3     : T3 check (Zaccagnino S >= 0.90)
+#   SVP_tier   : Final SVP tier
+#   N_events   : number of events used
+#   Mc         : magnitude of completeness (MAXC)
+#   b_value    : Gutenberg-Richter b-value
+sigma_h_km,D2_obs,D3_mcmc,D3_std,D3_ci_lo,D3_ci_hi,Pbnd_pct,KL_nats,eta,SVP_T1,SVP_T2,SVP_T3,SVP_tier,N_events,Mc,b_value
+7.5,2.2126,2.998,0.002,2.994,3.000,100.0,6.2,0.223,FAIL,FAIL,PASS,REJECT,3481,4.8,1.07
