@@ -556,8 +556,6 @@ def bayesian_d3_inference(
 
 def compute_kl_divergence_d3(
     posterior_samples: np.ndarray,
-    prior_alpha: float = PRIOR_ALPHA,
-    prior_beta: float = PRIOR_BETA,
     grid_points: int = 1000,
     verbose: bool = True
 ) -> Dict[str, Any]:
@@ -568,8 +566,6 @@ def compute_kl_divergence_d3(
     
     Args:
         posterior_samples: MCMC samples from posterior
-        prior_alpha: Beta α parameter
-        prior_beta: Beta β parameter
         grid_points: Integration grid resolution
         verbose: Print results
     
@@ -586,11 +582,10 @@ def compute_kl_divergence_d3(
     # KDE for posterior
     posterior_kde = gaussian_kde(posterior_samples, bw_method='scott')
     
-    # Prior Beta density on [0, 4]
+    # Prior Uniform density on [1.5, 3.0]
     def prior_pdf(d3):
         if PRIOR_LOWER <= d3 <= PRIOR_UPPER:
-            u = (d3 - PRIOR_LOWER) / (PRIOR_UPPER - PRIOR_LOWER)
-            return beta.pdf(u, prior_alpha, prior_beta) / (PRIOR_UPPER - PRIOR_LOWER)
+            return 1.0 / (PRIOR_UPPER - PRIOR_LOWER)
         return 0.0
     
     # Integration grid

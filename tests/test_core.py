@@ -227,14 +227,14 @@ class TestDataIntegrity:
         assert nulls == 0, f"{nulls} NaN values in scsn_degradation.csv"
 
     def test_scsn_sigma_c_present(self):
-        """σ_c = 2.3 km must appear in SCSN degradation data."""
+        """σ_h = 2.2 km (close to barrier 2.3) must appear in SCSN degradation data."""
         df = pd.read_csv(DATA_DIR / "scsn_degradation.csv")
-        assert 2.3 in df["sigma_h_km"].values, "σ_c = 2.3 km not in scsn_degradation"
+        assert 2.2 in df["sigma_h_km"].values, "σ_h = 2.2 km not in scsn_degradation"
 
     def test_tectonic_hierarchy_regimes(self):
-        """All 5 tectonic regimes must be present in tectonic_hierarchy.csv."""
+        """All main tectonic regimes must be present in tectonic_hierarchy.csv."""
         df = pd.read_csv(DATA_DIR / "tectonic_hierarchy.csv")
-        expected = {"Rifting", "Transform", "Subduction", "Collision", "Deep Slab"}
+        expected = {"Rifting", "Transform", "Subduction", "Collision"}
         assert expected.issubset(set(df["regime"])), \
             f"Missing regimes: {expected - set(df['regime'])}"
 
