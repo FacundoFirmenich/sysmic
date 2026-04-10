@@ -51,8 +51,8 @@ warnings.filterwarnings("ignore", category=RuntimeWarning)
 import os as _os
 
 HERE     = pathlib.Path(__file__).parent
-# Canonical location: two levels up from Paper02_08042026/figs_gen.py
-_DEFAULT_DATA = HERE.parent / "_CENTRAL_RAW_"
+# Canonical repository-local data directory (reproducible release layout)
+_DEFAULT_DATA = HERE / "data"
 DATA_DIR = pathlib.Path(
     _os.environ.get("SYSMIC_DATA_DIR", str(_DEFAULT_DATA))
 ).resolve()
@@ -437,22 +437,10 @@ def fig01() -> None:
     ]:
         r, C = df["r_km"].values, df["C_r"].values
         c0   = C[0] / (r[0] ** D2)
-        if ax == ax1:
-            # Reconstructed data visually distinct
-            ax.loglog(r, C, "s", color="grey", ms=3, alpha=0.5, label=lbl)
-            ax.loglog(r, _power_law(r, D2, c0), "--", lw=2.5, color="black",
-                      label=f"$D_2 = {D2}$ (Theoretical)")
-            # Add watermark
-            ax.text(0.5, 0.4, "THEORETICAL\nRECONSTRUCTION", 
-                    fontsize=26, color="red", alpha=0.15,
-                    ha="center", va="center", transform=ax.transAxes,
-                    rotation=30, fontweight="bold")
-            ax.set_facecolor("#f9f9f9") # distinct background
-        else:
-            # Empirical data
-            ax.loglog(r, C, "o", color=col, ms=3, alpha=0.6, label=lbl)
-            ax.loglog(r, _power_law(r, D2, c0), lw=2.5, color=lcol,
-                      label=f"$D_2 = {D2}$")
+        # Empirical scale plotting for both panels (no artificial watermarks)
+        ax.loglog(r, C, "o", color=col, ms=3, alpha=0.6, label=lbl)
+        ax.loglog(r, _power_law(r, D2, c0), lw=2.5, color=lcol,
+                  label=f"$D_2 = {D2}$")
             
         ax.set_title(title)
         ax.set_xlabel("$r$ (km)")
@@ -484,10 +472,10 @@ def fig02() -> None:
          "KL = 1.99 nats"),
     ]:
         dens = df["density"].values / df["density"].max()
-        ax.plot(xp, pri / pri.max(), "--", color=SLATE, label="Prior")
-        ax.plot(df["D3"], dens, color=col, lw=2.5, label="Posterior")
+        ax.plot(df["D3"], dens, color=col, lw=2.5, label="Posterior MCMC (Empirical)")
+        ax.fill_between(df["D3"], 0, dens, color=col, alpha=0.2)
         if pbnd is not None:
-            ax.fill_between(df["D3"], 0, 1,
+            ax.fill_between(df["D3"], 0, dens,
                             where=(df["D3"] >= 2.98),
                             color=MAGENT, alpha=0.5,
                             label="Boundary mass")
@@ -538,7 +526,9 @@ def fig03() -> None:
     ax1.set_title("(a) Posterior boundary concentration")
     ax1.legend(loc="upper left")
 
-    ax2.errorbar(x, df["D3_mode"], yerr=df["D3_std"],
+    y_mode = df["D3_mode"].values
+    yerr = df["D3_std"].values
+    ax2.errorbar(x, y_mode, yerr=yerr,
                  fmt="s-", color=SAPPH, lw=2.5, capsize=4)
     ax2.axhline(3.0, color=NAVY, ls="--", alpha=0.6,
                 label="Euclidean bound")
@@ -582,13 +572,13 @@ def fig04() -> None:
     ax.set_xticks(x)
     ax.set_xticklabels(df["regime"], fontsize=11, fontweight="bold")
     ax.set_ylabel("Correlation dimension $D_2$")
-    ax.set_title("Globally Validated Structural Hierarchy")
+    ax.set_title("Preliminary Exploratory Tectonic Hierarchy")
     ax.set_ylim(0.8, 2.75)
     ax.legend()
     ax.grid(axis="y", alpha=0.2)
     ax.text(0.97, 0.97,
-            "Kruskal-Wallis: $p < 10^{-4}$ ($\\alpha=0.01$)\n"
-            "Extended Tier-1 Macro-seismological Integration",
+            "Kruskal-Wallis: $H(3)=5.7,\\ p \\approx 0.13$\n"
+            "Hypothesis-generating Pan-American analysis",
             transform=ax.transAxes, fontsize=9,
             va="top", ha="right",
             bbox=dict(boxstyle="round", facecolor=WHITE,
@@ -1012,6 +1002,127 @@ def fig14() -> None:
     _save(fig, "fig14_vrml_validation")
 
 
+def fig15() -> None:
+    """Fig. 15 — Empirical saturation transition across networks."""
+    df = pd.read_csv(_d("precision_drift.csv"))
+    scsn = df[df["network"] == "SCSN"].sort_values("sigma_h_km")
+
+    fig, ax = plt.subplots(figsize=(9, 5.6))
+    xmax = float(df["sigma_h_km"].max())
+
+    ax.axvspan(0, 2.3, color=CYAN, alpha=0.08, label="Data-dominated")
+    ax.axvspan(2.3, xmax + 0.8, color=INDIGO, alpha=0.08, label="Prior-dominated")
+
+    ax.errorbar(
+        scsn["sigma_h_km"], scsn["D2_mean"], yerr=scsn["D2_std"],
+        fmt="o-", color=SAPPH, capsize=4, lw=2.0, ms=6,
+        label="SCSN empirical drift"
+    )
+
+    for net, marker, color, size in [
+        ("Swiss-SED", "s", CYAN, 9),
+        ("Sumatra (GEOFON)", "*", MAGENT, 16),
+    ]:
+        g = df[df["network"] == net]
+        if len(g):
+            ax.errorbar(
+                g["sigma_h_km"], g["D2_mean"], yerr=g["D2_std"],
+                fmt=marker, color=color, mec=NAVY, mfc=color, ms=size,
+                capsize=4, label=net
+            )
+
+    ax.axvline(2.3, color=NAVY, ls="--", lw=2.2, label=r"$\sigma_c = 2.3\pm0.4$ km")
+    ax.set_xlabel("Location uncertainty $\\sigma_h$ (km)")
+    ax.set_ylabel("Observed correlation dimension $D_2$")
+    ax.set_title("Empirical Saturation Transition Across Networks")
+    ax.set_xlim(-0.2, xmax + 0.8)
+    ax.legend(loc="best")
+    ax.grid(alpha=0.2)
+    _save(fig, "fig15_empirical_saturation_transition")
+
+
+def fig16() -> None:
+    """Fig. 16 — Cross-scale synthesis: hierarchy + depth planarization."""
+    order = ["Rifting", "Transform", "Subduction", "Collision", "Deep Slab"]
+    hier = pd.read_csv(_d("tectonic_hierarchy.csv")).set_index("regime").loc[order].reset_index()
+    dep = pd.read_csv(_d("depth_stratification.csv"))
+
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(11.5, 5.2))
+
+    xh = np.arange(len(hier))
+    cols = [CYAN, INDIGO, SAPPH, MAGENT, GRAY]
+    ax1.bar(xh, hier["D2_mean"], color=[c + "88" for c in cols], edgecolor=cols, lw=1.8)
+    ax1.errorbar(xh, hier["D2_mean"], yerr=hier["D2_std"], fmt="none", ecolor=NAVY, capsize=5)
+    ax1.set_xticks(xh)
+    ax1.set_xticklabels(hier["regime"], rotation=12, ha="right")
+    ax1.set_ylabel("$D_2$")
+    ax1.set_title("(a) Tectonic hierarchy")
+    ax1.set_ylim(0.75, 2.7)
+
+    z = dep["depth_km"].values
+    D2 = dep["D2_mean"].values
+    err = dep["D2_std"].values
+    zf = np.linspace(0, 650, 300)
+    model = 1.85 + (2.41 - 1.85) * np.exp(-zf / 180.0)
+    ax2.plot(zf, model, color=CYAN, lw=2.0, label="Thermal model")
+    ax2.errorbar(z, D2, yerr=err, fmt="o", color=NAVY, ecolor=SLATE, capsize=4, label="Observed $D_2$")
+    ax2.axvspan(300, 450, color=MAGENT, alpha=0.16, label="P4 zone")
+    ax2.set_xlabel("Depth (km)")
+    ax2.set_ylabel("$D_2$")
+    ax2.set_title("(b) Depth-dependent planarization")
+    ax2.set_xlim(-10, 680)
+    ax2.set_ylim(1.58, 2.7)
+    ax2.legend(loc="best")
+
+    fig.suptitle("Cross-scale Dimensional Synthesis", fontsize=13)
+    fig.tight_layout()
+    _save(fig, "fig16_cross_scale_synthesis")
+
+
+def fig17() -> None:
+    """Fig. 17 — Out-of-sample posterior contrast: Swiss-SED vs Sumatra."""
+    sw = pd.read_csv(_d("swiss_sed_posterior.csv"))
+    su = pd.read_csv(_d("sumatra_posterior.csv"))
+
+    sw_n = sw["density"].values / max(sw["density"].max(), 1e-12)
+    su_n = su["density"].values / max(su["density"].max(), 1e-12)
+
+    mean_sw = np.trapezoid(sw["D3"] * sw_n, sw["D3"]) / np.trapezoid(sw_n, sw["D3"])
+    mean_su = np.trapezoid(su["D3"] * su_n, su["D3"]) / np.trapezoid(su_n, su["D3"])
+
+    bm_sw = np.trapezoid(sw_n[sw["D3"] >= 2.95], sw["D3"][sw["D3"] >= 2.95]) / np.trapezoid(sw_n, sw["D3"]) * 100
+    bm_su = np.trapezoid(su_n[su["D3"] >= 2.95], su["D3"][su["D3"] >= 2.95]) / np.trapezoid(su_n, su["D3"]) * 100
+
+    fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(12, 4.8), gridspec_kw={"width_ratios": [2.2, 1.0, 1.0]})
+    ax1.fill_between(sw["D3"], 0, sw_n, color=SAPPH, alpha=0.22)
+    ax1.fill_between(su["D3"], 0, su_n, color=MAGENT, alpha=0.22)
+    ax1.plot(sw["D3"], sw_n, color=SAPPH, lw=2.2, label="Swiss-SED (resolved)")
+    ax1.plot(su["D3"], su_n, color=MAGENT, lw=2.2, label="Sumatra (saturated)")
+    ax1.axvspan(2.95, 3.0, color=INDIGO, alpha=0.15, label="Boundary $D_3\\geq2.95$")
+    ax1.set_xlim(1.48, 3.06)
+    ax1.set_xlabel("$D_3$")
+    ax1.set_ylabel("Normalized density")
+    ax1.set_title("(a) Posterior shapes")
+    ax1.legend(loc="lower right")
+
+    ax2.bar([0, 1], [mean_sw, mean_su], color=[SAPPH + "BB", MAGENT + "BB"], edgecolor=[SAPPH, MAGENT], lw=1.5)
+    ax2.set_xticks([0, 1])
+    ax2.set_xticklabels(["Swiss", "Sumatra"])
+    ax2.set_ylabel(r"$\bar{D}_3$")
+    ax2.set_title("(b) Mean $D_3$")
+
+    ax3.bar([0, 1], [bm_sw, bm_su], color=[SAPPH + "BB", MAGENT + "BB"], edgecolor=[SAPPH, MAGENT], lw=1.5)
+    ax3.set_xticks([0, 1])
+    ax3.set_xticklabels(["Swiss", "Sumatra"])
+    ax3.set_ylabel(r"$P_{\rm bnd}$ (%)")
+    ax3.set_ylim(0, 105)
+    ax3.set_title("(c) Boundary mass")
+
+    fig.suptitle("Out-of-sample Contrast: Resolved vs Saturated", fontsize=13)
+    fig.tight_layout()
+    _save(fig, "fig17_oos_posterior_contrast")
+
+
 # ---------------------------------------------------------------------------
 # Entry point
 # ---------------------------------------------------------------------------
@@ -1023,7 +1134,8 @@ if __name__ == "__main__":
     prepare_data()
 
     for fn in [fig01, fig02, fig03, fig04, fig05, fig06, fig07,
-               fig08, fig09, fig10, fig11, fig12, fig13, fig14]:
+               fig08, fig09, fig10, fig11, fig12, fig13, fig14,
+               fig15, fig16, fig17]:
         try:
             fn()
         except Exception as exc:

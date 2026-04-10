@@ -14,11 +14,15 @@ Covers:
 Run with:  pytest tests/ -v
 """
 import pathlib
+import sys
 import numpy as np
 import pandas as pd
 import pytest
 
 DATA_DIR = pathlib.Path(__file__).parent.parent / "data"
+REPO_ROOT = pathlib.Path(__file__).parent.parent
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
 
 
 # ---------------------------------------------------------------------------
@@ -227,9 +231,9 @@ class TestDataIntegrity:
         assert nulls == 0, f"{nulls} NaN values in scsn_degradation.csv"
 
     def test_scsn_sigma_c_present(self):
-        """σ_h = 2.2 km (close to barrier 2.3) must appear in SCSN degradation data."""
+        """σ_h = 2.3 km (Fisher barrier anchor) must appear in SCSN degradation data."""
         df = pd.read_csv(DATA_DIR / "scsn_degradation.csv")
-        assert 2.2 in df["sigma_h_km"].values, "σ_h = 2.2 km not in scsn_degradation"
+        assert 2.3 in df["sigma_h_km"].values, "σ_h = 2.3 km not in scsn_degradation"
 
     def test_tectonic_hierarchy_regimes(self):
         """All main tectonic regimes must be present in tectonic_hierarchy.csv."""

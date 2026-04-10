@@ -19,8 +19,7 @@ from sysmic.geometry    import *  # noqa: F401, F403
 
 __all__ = [
     "FractalDimensionEstimator",
-    "TripleValidator",
-    "ZaccagninoStabilityScore",
+    "SyntheticValidator",
     "bayesian_d3_inference",
     "log_prior_d3",
     "PRIOR_LOWER",

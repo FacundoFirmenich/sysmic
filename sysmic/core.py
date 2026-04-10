@@ -49,6 +49,24 @@ class GeodeticTransformer:
 
         return np.column_stack([x, y, z])
 
+    def geodetic_to_km(
+        self, lat: np.ndarray, lon: np.ndarray, depth_km: np.ndarray
+    ) -> np.ndarray:
+        """
+        Convert geodetic coordinates to local metric coordinates in kilometers.
+
+        Strategy:
+        1) Convert to ECEF (meters)
+        2) Center at dataset centroid
+        3) Convert to km
+
+        Returns:
+            (N, 3) array in kilometers
+        """
+        ecef_m = self.geodetic_to_ecef(lat, lon, depth_km)
+        centered_m = ecef_m - np.mean(ecef_m, axis=0)
+        return centered_m / 1000.0
+
 
 class FractalDimensionEstimator:
     """
@@ -1000,3 +1018,15 @@ class SyntheticValidator:
             print("=" * 70)
 
         return df, all_pass
+
+
+def main() -> None:
+    """Console entrypoint for basic package health checks."""
+    print("Sysmic core entrypoint")
+    print("- Running lightweight synthetic validation (1D/2D critical checks)")
+    est = FractalDimensionEstimator()
+    validator = SyntheticValidator(est)
+    _, passed = validator.run(verbose=True)
+    if not passed:
+        raise SystemExit(1)
+    print("- Validation finished successfully")

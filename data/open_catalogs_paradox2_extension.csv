@@ -1,0 +1,5 @@
+catalog,access,tectonic_setting,D2,D3,D3_std,sigma_h_km,Pbnd_pct,status
+Swiss-SED Valais,EIDA open endpoint,Rifting,1.5,1.911,0.066,1.2,0.0,resolved
+GeoNet Bay of Plenty,GeoNet open web services,Back-arc rifting,1.91,2.1980360531425096,0.19747251179402414,1.1,0.0,resolved
+GeoNet Cook Strait,GeoNet open web services,Transform/thrust,2.24,2.528892001091647,0.17294456260817404,0.9,0.0,resolved
+GEOFON Sumatra,GEOFON open endpoint,Subduction,2.2126,2.998,0.002,7.5,100.0,saturated

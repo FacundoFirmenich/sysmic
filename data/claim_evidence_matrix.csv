@@ -1,0 +1,6 @@
+claim_id,claim,evidence_main,data_source,stat_criterion,inference_level
+C1,Fisher barrier at sigma_c=2.3±0.4 km separates resolved vs saturated inference,Tab. scsn; Fig. scsn_degradation; Fig. precision_drift,SCSN degradation + Swiss-SED + GEOFON,Pbnd transition + posterior shift + uncertainty propagation,Calibrated + externally supported
+C2,Below-barrier catalogs recover sub-volumetric D3,Tab. hinet; Fig. posteriors; Fig. oos_posterior_contrast,Hi-Net JUICE + Swiss-SED,Pbnd=0%; KL>10 nats; bounded posterior away from D3=3,Empirically confirmed
+C3,Depth-dependent planarization within Japan is monotonic,Tab. depth; Tab. depth_stats; Fig. depth_stratification,Hi-Net 2001-2005 depth-strat,"p<1e-15; Hedges g=1.76 [1.52,2.00]",Empirically confirmed
+C4,Deck-of-cards inversion provides sequence-resolved spacing estimates,Tab. delta_tohoku_bootstrap; Fig. delta_tohoku_bootstrap; Fig. delta_sensitivity_heatmap,Hi-Net JUICE D3 posteriors,"Bootstrap CI + sensitivity to (L,ell)","Model-based, stress-tested"
+C5,Preliminary tectonic hierarchy is portable to open catalogs,Tab. hierarchy; Tab. open_catalogs_paradox2,Pan-American + Swiss-SED + GeoNet + GEOFON,Resolved/saturated consistency under precision conditioning,Preliminary/hypothesis-generating
